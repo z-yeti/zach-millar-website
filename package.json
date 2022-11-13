@@ -16,11 +16,23 @@
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint \"**/*.{ts,tsx,js,jsx}\"",
+    "pretty": "prettier --write \"./**/*.{ts,tsx,js,jsx,json}\""
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +50,14 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!src/**/index.{ts,tsx,js,jsx}",
+      "!src/store/**/*.{ts,tsx,js,jsx}",
+      "!src/react-app-env.d.ts"
     ]
   }
 }
