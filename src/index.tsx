@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './containers/App'
+import { ThemeWrapper } from './containers/ThemeWrapper'
 import reportWebVitals from './reportWebVitals'
-import { GlobalStyles } from './styles/GlobalStyles'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <ThemeWrapper>
+      <App />
+    </ThemeWrapper>
   </React.StrictMode>
 )
 
