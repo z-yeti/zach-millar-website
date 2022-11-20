@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
+import { transitionSpeedDirection } from './Themes'
 
 export const GlobalStyles = createGlobalStyle`
+  html * {
+      font-family: niveau-grotesk-small-caps,sans-serif;
+    }
   body {
     padding: 0;
     margin: 0;
@@ -9,9 +13,9 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    background: ${({ theme }) => theme.body};
+    background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    transition: all 0.22s linear;
+    transition: background-color ${transitionSpeedDirection}, color ${transitionSpeedDirection};
   }
   #root {
     margin:0 auto;

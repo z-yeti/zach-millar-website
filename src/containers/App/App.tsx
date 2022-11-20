@@ -1,5 +1,8 @@
-import React from 'react'
+import { useState } from 'react'
+import { Landing } from '../Landing'
 
 export const App = () => {
-  return <div className='App'>{`Hello, I'm Zach :)`}</div>
+  const [isLoading, setIsLoading] = useState(true)
+
+  return <>{isLoading ? <Landing /> : <div>Hello</div>}</>
 }

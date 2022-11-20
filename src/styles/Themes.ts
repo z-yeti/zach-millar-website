@@ -9,8 +9,10 @@ declare module 'styled-components' {
   }
 }
 
-const millarBlack = '#1c1f21'
-const millarWhite = '#eaebed'
+export const millarBlack = '#1c1f21'
+export const millarWhite = '#eaebed'
+
+export const transitionSpeedDirection = '0.22s'
 
 export const lightTheme = {
   body: millarWhite,

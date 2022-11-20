@@ -18,9 +18,8 @@ const ThemeSwitchButton = styled.button<{ appTheme: string }>`
   padding: 0.7rem;
   font-size: 1.5rem;
   color: ${({ appTheme }) =>
-    appTheme === 'light' ? darkTheme.text : lightTheme.text};
-  background: ${({ appTheme }) =>
-    appTheme === 'light' ? darkTheme.body : lightTheme.body};
+    appTheme === 'light' ? lightTheme.text : darkTheme.text};
+  background: none;
   border: none;
   border-radius: 8px;
   cursor: pointer;
