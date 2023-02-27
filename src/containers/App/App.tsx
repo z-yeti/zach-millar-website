@@ -1,8 +1,5 @@
-import { useState } from 'react'
-import { Landing } from '../Landing'
+const App = () => {
+  return <div>Hello</div>;
+};
 
-export const App = () => {
-  const [isLoading, setIsLoading] = useState(true)
-
-  return <>{isLoading ? <Landing /> : <div>Hello</div>}</>
-}
+export default App;
